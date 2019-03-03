@@ -1,0 +1,16 @@
+version: '3'
+services:
+  nuxt:
+    build: .
+    tty: true
+    volumes:
+      - ".:/OGPMaker"
+    ports:
+      - "3000:3000"
+    environment:
+      - NUXT_ENV_APIKEY=AIzaSyAW2Pg3NdvTyybiYMwU_0kWeZJqkz4b24A
+      - NUXT_ENV_AUTH_DOMAIN=haikumaker-5d430.firebaseapp.com
+      - NUXT_ENV_DATABASE_URL=https://haikumaker-5d430.firebaseio.com
+      - NUXT_ENV_PROJECT_ID=haikumaker-5d430
+      - NUXT_ENV_STORAGE_BUCKET=haikumaker-5d430.appspot.com
+      - NUXT_ENV_MEAAAGING_SENDER_ID=941115858905
