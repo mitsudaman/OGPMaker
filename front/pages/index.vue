@@ -1,17 +1,14 @@
 <template>
   <section class="container">
     <div>
-      <div 
-        id="svg_demo">
-        <svg 
-          ref="svgArea"
-          viewBox="0 0 200 100">
+      <div>
+        <svg ref="svgArea" viewBox="0 0 200 100">
+          <rect x="0" y="0" width="200" height="100" fill="#fff" stroke="#12b886" stroke-width="15"></rect>
           <text 
           x="50%" 
           y="50%" 
-          font-size="10px"
+          font-size="8px"
           text-anchor="middle">{{text1}}</text>
-          <rect x="0" y="0" width="200" height="100" fill="none" stroke="#12b886"></rect>
         </svg>
       </div>
       <div style="text-align:right">
@@ -27,24 +24,24 @@ import firebase from 'firebase'
 import canvg from 'canvg';
 //  // Set the configuration for your app
 //   // TODO: Replace with your project's config object
-//   var config = {
-//     apiKey: '<your-api-key>',
-//     authDomain: '<your-auth-domain>',
-//     databaseURL: '<your-database-url>',
-//     storageBucket: '<your-storage-bucket>'
-//   };
+// var config = {
+//   apiKey: '<your-api-key>',
+//   authDomain: '<your-auth-domain>',
+//   databaseURL: '<your-database-url>',
+//   storageBucket: '<your-storage-bucket>'
+// };
 //   firebase.initializeApp(config);
-  var config = {
-    apiKey: "AIzaSyBvlMK31fMK5je46_rLJpXcGsyNmfVHw_E",
-    authDomain: "my-project-61b97.firebaseapp.com",
-    databaseURL: "https://my-project-61b97.firebaseio.com",
-    projectId: "my-project-61b97",
-    storageBucket: "my-project-61b97.appspot.com",
-    messagingSenderId: "241663631931"
-  };
-  if (!firebase.apps.length) {
-      firebase.initializeApp(config);
-  }
+var config = {
+  apiKey: "AIzaSyBvlMK31fMK5je46_rLJpXcGsyNmfVHw_E",
+  authDomain: "my-project-61b97.firebaseapp.com",
+  databaseURL: "https://my-project-61b97.firebaseio.com",
+  projectId: "my-project-61b97",
+  storageBucket: "my-project-61b97.appspot.com",
+  messagingSenderId: "241663631931"
+};
+if (!firebase.apps.length) {
+    firebase.initializeApp(config);
+}
 
 export default {
   components: {
@@ -70,11 +67,10 @@ export default {
       canvg(canvas, data)
 
       // 作成
-      console.log(canvas)
       let image = canvas.toDataURL('image/jpeg').split(',')[1]
-      // createRef.putString(image, 'base64').then((snapshot) =>{
-      //   console.log('Uploaded a blob or file!');
-      // });
+      createRef.putString(image, 'base64').then((snapshot) =>{
+        console.log('Uploaded a blob or file!');
+      });
     }
   }
 }
