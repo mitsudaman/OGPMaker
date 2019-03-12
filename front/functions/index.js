@@ -16,7 +16,7 @@ exports.bigben = functions.https.onRequest((req, res) => {
       <meta property="og:url" content="${SITEURL}">
       <meta property="og:type" content="website">
       <meta property="og:site_name" content="${TITLE}">
-      <meta name="twitter:site" content="@mitudama">
+      <meta name="twitter:site" content="">
       <meta name="twitter:card" content="summary_large_image">
       <meta name="twitter:title" content="${TITLE}">
       <meta name="twitter:image" content="${IMAGE}">

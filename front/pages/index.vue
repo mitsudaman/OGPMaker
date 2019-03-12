@@ -22,23 +22,16 @@
 <script>
 import firebase from 'firebase'
 import canvg from 'canvg';
-//  // Set the configuration for your app
-//   // TODO: Replace with your project's config object
-// var config = {
-//   apiKey: '<your-api-key>',
-//   authDomain: '<your-auth-domain>',
-//   databaseURL: '<your-database-url>',
-//   storageBucket: '<your-storage-bucket>'
-// };
-//   firebase.initializeApp(config);
+// Set the configuration for your app
+// TODO: Replace with your project's config object
 var config = {
-  apiKey: "AIzaSyBvlMK31fMK5je46_rLJpXcGsyNmfVHw_E",
-  authDomain: "my-project-61b97.firebaseapp.com",
-  databaseURL: "https://my-project-61b97.firebaseio.com",
-  projectId: "my-project-61b97",
-  storageBucket: "my-project-61b97.appspot.com",
-  messagingSenderId: "241663631931"
+  apiKey: '<your-api-key>',
+  authDomain: '<your-auth-domain>',
+  databaseURL: '<your-database-url>',
+  storageBucket: '<your-storage-bucket>'
 };
+  firebase.initializeApp(config);
+
 if (!firebase.apps.length) {
     firebase.initializeApp(config);
 }
